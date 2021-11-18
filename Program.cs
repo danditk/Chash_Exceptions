@@ -16,13 +16,19 @@ namespace Chash_Exceptions
             }
             catch (DivideByZeroException e)
             {
-                Console.WriteLine("Nie nie da się podzielić przez zero, a Ty... " + e.Message);
+                Console.WriteLine("Nie nie da się podzielić przez zero, a program widzi, że " + e.Message);
             }
             catch (Exception e)
             {
                 Console.WriteLine("YYY, coś poszło nie tak!" + e.Message);
             }
+            finally
+            {
+                Console.WriteLine("Ja i tak posprzątam :)");
+            }
+
             Console.ReadKey();
+
         }
 
         public static float Division(int a)
