@@ -10,6 +10,12 @@ namespace Chash_Exceptions
     {
         static void Main(string[] args)
         {
+
+        }
+
+        float Division(int a)
+        {
+            return 10 / a;
         }
     }
 }
