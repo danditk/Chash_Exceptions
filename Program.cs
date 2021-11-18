@@ -8,15 +8,20 @@ namespace Chash_Exceptions
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             try
             {
-                Console.WriteLine("Wynik: " + Division(0));
+                Console.WriteLine("Wynik: " + Division(5));
             }
-            catch (DivideByZeroException e)
+            //catch (DivideByZeroException e)
+            //{
+            //    Console.WriteLine("Nie nie da się podzielić przez zero, a program widzi, że " + e.Message);
+            //}
+            catch (DevideByFiveException e)
             {
-                Console.WriteLine("Nie nie da się podzielić przez zero, a program widzi, że " + e.Message);
+                Console.WriteLine("Obsługa!" + e.Message);
             }
             catch (Exception e)
             {
@@ -35,7 +40,8 @@ namespace Chash_Exceptions
         {
             if (a == 5)
             {
-                throw new Exception("Nigdy nie dziel przez 5!");
+                throw new DevideByFiveException();
+                //throw new Exception("Nigdy nie dziel przez 5!");
             }
 
             return 10 / a;
